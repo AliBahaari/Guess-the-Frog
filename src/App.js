@@ -43,6 +43,7 @@ function App() {
       setWrong(true);
       setTimeout(() => {
         setWrong(false);
+        setScore(prevState => prevState - 1);
       }, 1000);
 
     }
