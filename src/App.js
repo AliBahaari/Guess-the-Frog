@@ -33,17 +33,19 @@ function App() {
     if (id === randomNumber) {
 
       setCorrect(true);
+      setScore(prevState => prevState + 1);
+
       setTimeout(() => {
         setCorrect(false);
-        setScore(prevState => prevState + 1);
       }, 1000);
 
     } else {
 
       setWrong(true);
+      setScore(prevState => prevState - 1);
+
       setTimeout(() => {
         setWrong(false);
-        setScore(prevState => prevState - 1);
       }, 1000);
 
     }
